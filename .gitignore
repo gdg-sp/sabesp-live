@@ -1,0 +1,35 @@
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+.classpath
+.project
+.settings
+
+#gradle build files
+build
+bin
+.gradle
+
+#idea. For some reason Android studio seems to prefer keeping projects .idea in VCS so just exclude root
+*.iml
+/.idea
+
+#crashlytics
+com_crashlytics_export_strings.xml
+
+.directory

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SabespLive</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="fixed_label_accumulated_volume">Volume Acumulado</string>
+    <string name="fixed_label_pluviometry_stats">Dados Pluviométricos</string>
+</resources>
