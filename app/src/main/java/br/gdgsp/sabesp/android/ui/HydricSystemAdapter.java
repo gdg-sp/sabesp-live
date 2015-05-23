@@ -4,8 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import java.util.List;
+
 import br.gdgsp.sabesp.android.model.HydricSystem;
-import br.gdgsp.sabesp.android.model.ReservoirInfo;
 
 /**
  * Created by ubiratansoares on 5/22/15.
@@ -13,17 +14,20 @@ import br.gdgsp.sabesp.android.model.ReservoirInfo;
 
 public class HydricSystemAdapter extends FragmentPagerAdapter {
 
-    public HydricSystemAdapter(FragmentManager fm) {
+    List<HydricSystem> info;
+
+    public HydricSystemAdapter(FragmentManager fm, List<HydricSystem> hydricSystems) {
         super(fm);
+        info = hydricSystems;
+
     }
 
     @Override public Fragment getItem(int position) {
-        ReservoirInfo info = new ReservoirInfo("20%", "2mm", "80mm", "75mm");
-        HydricSystem hs = new HydricSystem("Cantareira", info);
+        HydricSystem hs = info.get(position);
         return HydricSystemFragment.with(hs);
     }
 
     @Override public int getCount() {
-        return 3;
+        return info.size();
     }
 }

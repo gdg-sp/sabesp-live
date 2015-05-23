@@ -12,6 +12,6 @@ import retrofit.http.GET;
 
 public interface SabespApi {
 
-    @GET("/v2") void fetchInfoForToday(Callback<List<HydricSystem>> callback);
+    @GET("/v2/2015-05-12") void fetchInfoForToday(Callback<List<HydricSystem>> callback);
 
 }

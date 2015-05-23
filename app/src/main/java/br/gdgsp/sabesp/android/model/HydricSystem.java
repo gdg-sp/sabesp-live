@@ -1,5 +1,7 @@
 package br.gdgsp.sabesp.android.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
@@ -8,8 +10,8 @@ import java.io.Serializable;
 
 public class HydricSystem implements Serializable {
 
-    String reservoirName;
-    ReservoirInfo info;
+    @SerializedName("name") String reservoirName;
+    @SerializedName("data") ReservoirInfo info;
 
     public HydricSystem(String reservoirName, ReservoirInfo info) {
         this.reservoirName = reservoirName;

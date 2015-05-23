@@ -1,5 +1,7 @@
 package br.gdgsp.sabesp.android.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
@@ -8,17 +10,10 @@ import java.io.Serializable;
 
 public class ReservoirInfo implements Serializable {
 
-    String percentage;
-    String daillyStats;
-    String monthStats;
-    String historicStats;
-
-    public ReservoirInfo(String percentage, String daillyStats, String monthStats, String historicStats) {
-        this.percentage = percentage;
-        this.daillyStats = daillyStats;
-        this.monthStats = monthStats;
-        this.historicStats = historicStats;
-    }
+    @SerializedName("volume_armazenado") String percentage;
+    @SerializedName("pluviometria_do_dia") String daillyStats;
+    @SerializedName("pluviometria_acumulada_no_mes") String monthStats;
+    @SerializedName("media_historica_do_mes") String historicStats;
 
     public String getPercentage() {
         return percentage;
