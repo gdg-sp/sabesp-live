@@ -1,4 +1,4 @@
-package br.gdgsp.sabesp.android;
+package br.gdgsp.sabesp.android.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import br.gdgsp.sabesp.android.R;
 import br.gdgsp.sabesp.android.model.HydricSystem;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -32,7 +33,7 @@ public class HydricSystemFragment extends Fragment {
         f.setArguments(b);
         return f;
     }
-    
+
     public HydricSystemFragment() {
         // Only possible constructor for fragment
     }
